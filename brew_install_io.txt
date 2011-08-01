@@ -1,0 +1,180 @@
+loning https://github.com/stevedekorte/io.git
+Updating /Users/shiori/Library/Caches/Homebrew/io--git
+git remote set-url origin https://github.com/stevedekorte/io.git
+git fetch origin
+git checkout-index -a -f --prefix=/private/tmp/homebrew-io-HEAD-0dTo/
+==> Downloading patches
+==> Patching
+/usr/bin/patch -f -p1 -i 001-homebrew.diff
+patching file addons/Image/CMakeLists.txt
+==> cmake .. -DCMAKE_INSTALL_PREFIX='/usr/local/Cellar/io/HEAD' -DCMAKE_BUILD_TYPE=None -Wno-dev
+cmake .. -DCMAKE_INSTALL_PREFIX='/usr/local/Cellar/io/HEAD' -DCMAKE_BUILD_TYPE=None -Wno-dev 
+-- The C compiler identification is GNU
+-- The CXX compiler identification is GNU
+-- Checking whether C compiler has -isysroot
+-- Checking whether C compiler has -isysroot - yes
+-- Checking whether C compiler supports OSX deployment target flag
+-- Checking whether C compiler supports OSX deployment target flag - yes
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Checking whether CXX compiler has -isysroot
+-- Checking whether CXX compiler has -isysroot - yes
+-- Checking whether CXX compiler supports OSX deployment target flag
+-- Checking whether CXX compiler supports OSX deployment target flag - yes
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Configuration set to: None
+-- Found AsyncRequest headers: /usr/include/aio.h
+-- GMP libs: GMP_LIBRARIES-NOTFOUND GMPXX_LIBRARIES-NOTFOUND
+-- Could NOT find GMP (missing:  GMP_INCLUDE_DIR GMP_LIBRARIES) 
+-- checking for one of the modules 'libffi'
+-- Could NOT find FFI (missing:  FFI_INCLUDE_DIRS FFI_LIBRARIES) 
+-- checking for one of the modules 'glib-2.0'
+-- checking for one of the modules 'cairo'
+-- Found Curses: /usr/lib/libcurses.dylib 
+-- Found EDIT: /usr/lib/libedit.dylib
+-- Found Fnmatch headers: /usr/include/fnmatch.h
+-- Found Freetype: /usr/X11R6/lib/libfreetype.dylib 
+-- Could NOT find GLFW (missing:  GLFW_LIBRARY GLFW_INCLUDE_DIR) 
+-- Found ZLIB: /usr/lib/libz.dylib
+-- Found PNG: /usr/X11R6/lib/libpng.dylib 
+-- Could NOT find TIFF (missing:  TIFF_LIBRARY TIFF_INCLUDE_DIR) 
+-- Could NOT find JPEG (missing:  JPEG_LIBRARY JPEG_INCLUDE_DIR) 
+-- Found Iconv: /usr/lib/libiconv.dylib
+-- checking for module 'libxml-2.0'
+--   found libxml-2.0, version 2.7.3
+-- Found LibXml2: /usr/lib/libxml2.dylib 
+-- checking for one of the modules 'glib-2.0'
+-- Found PythonLibs: /usr/lib/libpython2.6.dylib 
+-- Found Readline: /usr/lib/libreadline.dylib
+-- checking for module 'libpcre'
+--   found libpcre, version 7.9
+-- Found PCRE: /usr/local/include 
+-- checking for one of the modules 'sqlite>=3;sqlite3'
+-- Found OpenSSL: /usr/lib/libssl.dylib;/usr/lib/libcrypto.dylib 
+-- Found Syslog headers: /usr/include/syslog.h
+-- Looking for include files CMAKE_HAVE_PTHREAD_H
+-- Looking for include files CMAKE_HAVE_PTHREAD_H - found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE 
+-- Found ZLIB: /usr/lib/libz.dylib
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/homebrew-io-HEAD-0dTo/io-build
+==> make install
+make install 
+Scanning dependencies of target copy_basekit_headers
+[  0%] Copying files: /tmp/homebrew-io-HEAD-0dTo//tmp/homebrew-io-HEAD-0dTo/libs/basekit/source/*.h to /tmp/homebrew-io-HEAD-0dTo/io-build/_build/headers
+[  0%] Built target copy_basekit_headers
+Scanning dependencies of target copy_coroutine_headers
+[  0%] Copying files: /tmp/homebrew-io-HEAD-0dTo//tmp/homebrew-io-HEAD-0dTo/libs/coroutine/source/*.h to /tmp/homebrew-io-HEAD-0dTo/io-build/_build/headers
+[  0%] Built target copy_coroutine_headers
+Scanning dependencies of target copy_garbagecollector_headers
+[  0%] Copying files: /tmp/homebrew-io-HEAD-0dTo//tmp/homebrew-io-HEAD-0dTo/libs/garbagecollector/source/*.h to /tmp/homebrew-io-HEAD-0dTo/io-build/_build/headers
+[  1%] Built target copy_garbagecollector_headers
+Scanning dependencies of target copy_iovm_headers
+[  1%] Copying files: /tmp/homebrew-io-HEAD-0dTo//tmp/homebrew-io-HEAD-0dTo/libs/iovm/source/*.h to /tmp/homebrew-io-HEAD-0dTo/io-build/_build/headers
+[  1%] Built target copy_iovm_headers
+Scanning dependencies of target io2c
+[  1%] Building C object libs/iovm/tools/CMakeFiles/io2c.dir/io2c.c.o
+Linking C executable ../../../_build/binaries/io2c
+[  1%] Built target io2c
+Scanning dependencies of target coroutine
+[  1%] Building C object libs/coroutine/CMakeFiles/coroutine.dir/source/context.c.o
+[  2%] Building C object libs/coroutine/CMakeFiles/coroutine.dir/source/Coro.c.o
+[  2%] Building C object libs/coroutine/CMakeFiles/coroutine.dir/source/asm.S.o
+Linking C shared library ../../_build/dll/libcoroutine.dylib
+[  2%] Built target coroutine
+Scanning dependencies of target basekit
+[  2%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/BStream.c.o
+[  2%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/BStreamTag.c.o
+[  3%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/cdecode.c.o
+[  3%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/cencode.c.o
+[  3%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/CHash.c.o
+[  3%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/Common.c.o
+[  4%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/Date.c.o
+[  4%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/Duration.c.o
+[  4%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/DynLib.c.o
+[  5%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/Hash_fnv.c.o
+[  5%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/Hash_murmur.c.o
+[  5%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/Hash_superfast.c.o
+[  6%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/List.c.o
+[  6%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/MainArgs.c.o
+[  6%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/PointerHash.c.o
+[  7%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/PortableGettimeofday.c.o
+[  7%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/PortableSnprintf.c.o
+[  7%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/PortableSorting.c.o
+[  7%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/PortableStrlcpy.c.o
+[  8%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/PortableStrptime.c.o
+[  8%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/PortableTruncate.c.o
+[  8%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/PortableUsleep.c.o
+[  9%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/RandomGen.c.o
+[  9%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/Stack.c.o
+[  9%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/UArray.c.o
+[ 10%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/UArray_character.c.o
+[ 10%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/UArray_format.c.o
+[ 10%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/UArray_math.c.o
+[ 11%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/UArray_path.c.o
+[ 11%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/UArray_stream.c.o
+[ 11%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/UArray_string.c.o
+[ 11%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/UArray_utf.c.o
+[ 12%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/ucs2.c.o
+[ 12%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/ucs4.c.o
+[ 12%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/utf8.c.o
+[ 13%] Building C object libs/basekit/CMakeFiles/basekit.dir/source/utf_convert.c.o
+Linking C shared library ../../_build/dll/libbasekit.dylib
+ld: duplicate symbol _List_size in CMakeFiles/basekit.dir/source/Stack.c.o and CMakeFiles/basekit.dir/source/List.c.o for architecture x86_64
+collect2: ld returned 1 exit status
+make[2]: *** [_build/dll/libbasekit.dylib] Error 1
+make[1]: *** [libs/basekit/CMakeFiles/basekit.dir/all] Error 2
+make: *** [all] Error 2
+==> Exit Status: 2
+http://github.com/mxcl/homebrew/blob/master/Library/Formula/io.rb#L24
+==> Environment
+HOMEBREW_VERSION: 0.8
+HEAD: fb44064a2f2b2fe321d5faa67046aaa8385386dd
+HOMEBREW_PREFIX: /usr/local
+HOMEBREW_CELLAR: /usr/local/Cellar
+HOMEBREW_REPOSITORY: /usr/local
+HOMEBREW_LIBRARY_PATH: /usr/local/Library/Homebrew
+Hardware: dual-core 64-bit penryn
+OS X: 10.6.8
+Kernel Architecture: i386
+Ruby: 1.8.7-174
+/usr/bin/ruby => /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+Xcode: 4.0.2
+GCC-4.0: build 5494 
+GCC-4.2: build 5666 
+LLVM: build 2335 
+MacPorts or Fink? false
+X11 installed? true
+==> Build Flags
+CC: /usr/bin/cc => /usr/llvm-gcc-4.2/bin/llvm-gcc-4.2
+CXX: /usr/bin/c++ => /usr/bin/c++-4.2
+LD: /usr/bin/cc => /usr/llvm-gcc-4.2/bin/llvm-gcc-4.2
+CFLAGS: -O3 -march=core2 -msse4.1 -w -pipe
+CXXFLAGS: -O3 -march=core2 -msse4.1 -w -pipe
+
+Error: Failed executing: make install 
+Please report this bug: https://github.com/mxcl/homebrew/wiki/Checklist-before-filing-a-new-issue
+These existing issues may help you:
+https://github.com/mxcl/homebrew/issues/#issue/5254
+https://github.com/mxcl/homebrew/issues/#issue/5445
+https://github.com/mxcl/homebrew/issues/#issue/5597
+https://github.com/mxcl/homebrew/issues/#issue/5603
+https://github.com/mxcl/homebrew/issues/#issue/5970
+https://github.com/mxcl/homebrew/issues/#issue/6043
+https://github.com/mxcl/homebrew/issues/#issue/6120
+https://github.com/mxcl/homebrew/issues/#issue/6473
+
+Also try:
+  `brew doctor` to check your setup for common problems.
+  `brew missing` to check installed packages for missing deps.
+
